@@ -1,11 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
 import { useFormik } from "formik";
 import Cookies from "universal-cookie";
 import { GetCategories } from "../services/CategoryServices";
-import { useEffect } from "react";
 import { CreateNewPost } from "../services/PostServices";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";

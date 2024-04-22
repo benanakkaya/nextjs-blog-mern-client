@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Footer from "./components/Footer";
 import Toast from "./components/Toast/Toast";
 import "react-toastify/dist/ReactToastify.css";
+import "react-quill/dist/quill.snow.css";
 import { UserProvider } from "./context/User";
 
 export const metadata = {
