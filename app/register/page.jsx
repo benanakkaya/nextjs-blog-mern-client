@@ -1,13 +1,12 @@
 "use client";
 import axios from "axios";
 import { useFormik } from "formik";
-import React, { useState } from "react";
+import React from "react";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 import * as yup from "yup";
 
 const Register = () => {
-  const [status, setStatus] = useState("idle");
 
   const router = useRouter();
 

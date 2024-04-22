@@ -2,7 +2,7 @@
 import axios from "axios";
 import { useFormik } from "formik";
 import { useRouter } from "next/navigation";
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { toast } from "react-toastify";
 import * as yup from "yup";
 import cookie from 'js-cookie';
@@ -11,8 +11,8 @@ import { UserContext } from "../context/User";
 
 const LoginPage = () => {
 
-  const { isLogged, setIsLogged } = useContext(UserContext);
-    const [status,setStatus] = useState("idle");
+  const { isLogged,setIsLogged } = useContext(UserContext);
+
 
     const router = useRouter();
 
