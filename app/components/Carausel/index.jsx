@@ -24,11 +24,13 @@ const Carausel = () => {
   };
 
   return (
-    <Slider className="h-[240px] sm:h-[400px] bg-gray-400 " {...settings}>
+    <div className="h-[240px] sm:h-[400px] bg-gray-400 overflow-hidden" >
+    <Slider {...settings}>
       {posts.map((post) => (
-        <CarauselItem post={post} />
+        <CarauselItem key={post._id} post={post} />
       ))}
     </Slider>
+    </div>
   );
 };
 

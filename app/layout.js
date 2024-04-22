@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         <UserProvider>
         <Toast />
           <Header />
-        <div className="px-3 py-2 sm:px-6 sm:py-2 md:px-16 md:py-3 lg:px-32 lg:py-6 grid grid-cols-3 gap-4">
+        <div className="container px-3 py-4 lg:py-6 grid grid-cols-3 gap-4">
           <div className="col-span-3 lg:col-span-2">{children}</div>
           <Sidebar />
         </div>

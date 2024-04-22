@@ -27,7 +27,6 @@ const NewPost = () => {
 
   const handleContent = (e) => {
     setContent(e);
-    console.log(content);
     formik.setFieldValue("content", content);
   };
 
@@ -52,26 +51,26 @@ const NewPost = () => {
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="p-2 col-span-2 rounded-lg font-bold text-xl bg-customGreen text-white shadow-lg shadow-gray-400">
+      <div className="p-2 col-span-2 rounded-lg font-bold text-lg bg-customGreen text-white shadow-lg shadow-gray-400">
         Create New Post
       </div>
       <form onSubmit={formik.handleSubmit} className="flex flex-col gap-6">
         <input
-          placeholder="Title..."
+          placeholder="Title"
           className="px-2 py-1 outline-none border-customGray border-[2px] rounded-lg"
           name="title"
           onChange={formik.handleChange}
           value={formik.values.title}
         />
         <input
-          placeholder="Subtitle..."
+          placeholder="Subtitle"
           className="px-2 py-1 outline-none border-customGray border-[2px] rounded-lg"
           name="subtitle"
           onChange={formik.handleChange}
           value={formik.values.subtitle}
         />
         <input
-          placeholder="Image..."
+          placeholder="Image (URL)"
           className="px-2 py-1 outline-none border-customGray border-[2px] rounded-lg"
           name="image"
           onChange={formik.handleChange}
@@ -97,7 +96,7 @@ const NewPost = () => {
           value={content}
         />
         <button
-          className=" bg-customGreen rounded-lg text-white py-1"
+          className=" bg-customGreen rounded-lg text-white py-1 hover:bg-opacity-75"
           type="submit"
         >
           Create

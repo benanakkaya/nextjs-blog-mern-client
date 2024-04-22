@@ -97,3 +97,7 @@
 .htmlcontent i {
   font-style: italic;
 }
+
+.ql-editor{
+  min-height:250px;
+}

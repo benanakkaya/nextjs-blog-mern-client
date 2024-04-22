@@ -13,7 +13,7 @@ const Categories = async () => {
         <SideBarTitle title="Categories" />
         <div className='flex flex-col gap-2'>
           {categories.map(cat => (
-            <Link href={`/category/${cat._id}`} className='p-2 font-bold hover:text-customGreen shadow-sm shadow-gray-400 hover:shadow-customGreen' >{cat.name}</Link>
+            <Link href={`/category/${cat._id}`} className='p-2 font-bold text-sm hover:text-customGreen shadow-sm shadow-gray-400 hover:shadow-customGreen' >{cat.name}</Link>
             ))}
         </div>
     </div>

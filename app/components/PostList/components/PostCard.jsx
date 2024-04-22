@@ -11,12 +11,9 @@ const PostCard = ({post}) => {
       />
       <div className="flex flex-col justify-between flex-1 gap-2">
         <div className="flex flex-col gap-1 text-black">
-          <div className="text-[10px] leading-3 font-bold text-customGreen">{post.category.name}</div>
-          <div className="font-bold text-base">{post.title.length > 32 ? post.title.slice(0,32)+"..." : post.title}</div>
-          <div className="text-[10px] leading-3 italic text-opacity-60">
-            By {post.author.username}
-          </div>
-          <div className="text-gray-600 italic">{post.subtitle.length < 70 ? post.subtitle : post.subtitle.slice(0,70)+"..."}</div>
+          <div className="text-xs leading-3 font-bold text-customGreen">{post.category.name}</div>
+          <div className="font-bold text-base h-12">{post.title}</div>
+          <div className="text-gray-600 text-sm">{post.subtitle.length < 150 ? post.subtitle : post.subtitle.slice(0,150)+"..."}</div>
         </div> 
         <div className="text-xs font-bold text-end">{new Date(post.createdAt).toLocaleDateString("tr-TR")}</div>
       </div>

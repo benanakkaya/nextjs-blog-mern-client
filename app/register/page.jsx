@@ -25,7 +25,7 @@ const Register = () => {
         password: values.password,
       };
       const res = await axios
-        .post("http://localhost:5000/user/register", userValues)
+        .post(`${process.env.NEXT_PUBLIC_API_URL}/user/register`, userValues)
         .then((res) => {
           toast.success(res.data.message);
           router.push("/login");
@@ -50,7 +50,7 @@ const Register = () => {
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="p-2 col-span-2 rounded-lg flex items-center gap-2 font-bold text-xl h-[43.95px] bg-customGreen text-white shadow-lg shadow-gray-400">
+      <div className="p-2 col-span-2 rounded-lg flex items-center gap-2 font-bold text-lg h-[43.95px] bg-customGreen text-white shadow-lg shadow-gray-400">
         Register
       </div>
       <form onSubmit={formik.handleSubmit} className="flex flex-col gap-4">
@@ -118,7 +118,7 @@ const Register = () => {
         </label>
         <button
           type="submit"
-          className="px-2 py-1 bg-customGreen text-white font-bold rounded-lg"
+          className="px-2 py-1 bg-customGreen text-white font-bold rounded-lg hover:bg-opacity-75"
         >
           Register
         </button>

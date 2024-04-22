@@ -6,8 +6,9 @@ import { useRouter } from "next/navigation";
 import React, { useContext } from "react";
 import { useEffect } from "react";
 import Cookies from "universal-cookie";
+import MobileMenu from "./MobileMenu";
 
-const AuthButtons = () => {
+const Nav = () => {
   const { isLogged, setIsLogged } = useContext(UserContext);
 
   const cookies = new Cookies();
@@ -30,6 +31,8 @@ const AuthButtons = () => {
 
   return (
     <>
+    <nav className="hidden md:flex items-center gap-4">
+    <Link href="/">Home</Link>
       {isLogged === false ? (
         <>
           <Link href="/login">Login</Link>
@@ -46,8 +49,10 @@ const AuthButtons = () => {
           <button onClick={handleLogout}>Logout</button>
         </>
       )}
+    </nav>
+    <MobileMenu handleLogout={handleLogout} isLogged={isLogged} />
     </>
   );
 };
 
-export default AuthButtons;
+export default Nav;

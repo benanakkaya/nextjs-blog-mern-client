@@ -10,10 +10,10 @@ const PopularPostCard = ({post}) => {
             src={post.image}
             alt={post.title}
           />
-          <div className="flex-1 text-sm h-full flex flex-col justify-between">
-            <div className="font-bold group-hover:text-customGreen">{post.title.length > 32 ? post.title.slice(0,32)+"...":post.title}</div>
+          <div className="flex-1 text-sm flex flex-col h-[80px] justify-between">
+            <div className="font-bold group-hover:text-customGreen text-sm">{post.title}</div>
             <div>{post.subtitle.length > 36 ? post.subtitle.slice(0,36)+"...":post.subtitle}</div>
-            <div className="text-xs">{new Date(post.createdAt).toLocaleDateString("tr-TR")}</div>
+            <div className="text-[10px]">{new Date(post.createdAt).toLocaleDateString("tr-TR")}</div>
           </div>
         </Link>
   )
